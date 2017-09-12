@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
+    tools:context="com.grademojo.forex_2.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:gravity="center_horizontal"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#3f88fb"
+            android:paddingTop="10dp"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Profile"
+                android:textColor="#ffffff"
+                android:layout_marginStart="30dp"
+                android:gravity="center_horizontal"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/settings"
+                android:layout_marginEnd="20dp"
+                />
+
+
+
+
+
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            >
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_marginBottom="50dp"
+                android:background="#3f88fb"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                >
+
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/pic" />
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="John smith"
+            android:layout_marginTop="10dp"
+            android:textSize="30dp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Marketing Head"
+            android:textColor="#c6c6c7"
+
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_white"
+            >
+
+            <TextView
+                android:id="@+id/text_for_beginner"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Beginner"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:background="@drawable/blue"
+                android:gravity="center"
+
+
+                />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="40dp"
+                android:background="#3f88fb"
+                />
+
+
+            <TextView
+                android:id="@+id/text_for_Intermediate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Intermediate"
+                android:background="#ffffff"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:gravity="center"
+
+                />
+
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="40dp"
+                android:background="#989797"
+                />
+
+            <TextView
+                android:id="@+id/text_for_Advance"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Advance"
+                android:layout_weight="1"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/white"
+                android:gravity="center"
+                />
+
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Course"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            />
+
+
+
+       <android.support.v7.widget.RecyclerView
+           android:id="@+id/recylcer_view_1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+
+
+       </android.support.v7.widget.RecyclerView>
+
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Suggested Course"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recylcer_view_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+        </android.support.v7.widget.RecyclerView>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ScrollView>

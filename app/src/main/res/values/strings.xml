@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Forex</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string name="para">
+    <p>
+        Forex is traded 24 hours a day, 5 days a week
+        </p>
+        <p>
+        across by banks , institutions and individual
+            </p>
+        <p>
+        trade worldwide.Unlike other financial market
+        </p>
+        <p>
+
+        there is no centralized marketplace for forex
+            </p>
+
+        <p>
+        currencies trade over the counter in whatever
+            </p>
+        <p>
+        market is open at that time.
+    </p>
+
+
+
+    </string>
+
+
+    <string name="facebook_app_id">215616025636708</string>
+    <string name="fb_login_protocol_scheme">fb215616025636708</string>
+</resources>

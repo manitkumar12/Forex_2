@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/white"
+    tools:context="com.grademojo.forex_2.Main9Activity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="50dp"
+            android:background="#3f88fb"
+            android:paddingBottom="20dp"
+
+            >
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:text="What is Forex ?"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/search"
+                />
+
+
+
+
+
+        </LinearLayout>
+
+
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Once you decide what type of trader you are, you should begin to invest yourself into education and research. Make continual learning a priority, each person’s strategy or methodology is unique and cannot be duplicated. Therefore your plan is most successful when it is based on your individual needs. Evaluate your needs and the effort required. Make sure you understand why you are placing trades. An initial investment maybe monetary but will benefit you over the long-term. Time and research should be continuing investments. Research by way of following current global events and keeping up to date on current analysis tools will help educate you further on all aspects of trading. Ask yourself, “Am I a fundamental or technical trader?”"
+           />
+
+    </LinearLayout>
+</ScrollView>

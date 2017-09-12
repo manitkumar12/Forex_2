@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity=""
+    >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+
+
+            <ImageView
+                android:id="@+id/forex_play_icon_my_course"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/grey_icon"
+                android:layout_gravity="center"
+
+
+                />
+
+
+
+            <View
+                android:id="@+id/forex_border_my_course"
+                android:layout_width="0.6dp"
+                android:layout_height="35dp"
+                android:background="#29bb20"
+                android:layout_gravity="center_horizontal"
+                />
+
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+        <TextView
+            android:id="@+id/forex_text_view_my_course"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="What"
+            android:textSize="18sp"
+            android:textColor="@color/grey"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+
+
+            />
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+
+
+
+        <TextView
+            android:id="@+id/timing"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="3-min"
+            android:textSize="14sp"
+            android:textColor="@color/light_grey"
+            android:layout_marginStart="10dp"
+
+            android:gravity="center_horizontal"
+
+            />
+
+
+            <TextView
+                android:id="@+id/points"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" 5 points"
+                android:textSize="14sp"
+                android:textColor="@color/yellow"
+                android:layout_marginStart="10dp"
+
+                android:gravity="center_horizontal"
+
+                />
+
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
