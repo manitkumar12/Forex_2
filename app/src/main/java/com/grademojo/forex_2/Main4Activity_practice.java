@@ -1,12 +1,15 @@
 package com.grademojo.forex_2;
 
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -14,6 +17,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.LinearSnapHelper;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SnapHelper;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,6 +33,8 @@ import java.util.List;
 public class Main4Activity_practice extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private RecyclerView  recyclerView1;
+
+    private boolean blockBackButton;
 
 
     private TextView navbar;
@@ -50,22 +56,55 @@ public class Main4Activity_practice extends AppCompatActivity implements Navigat
     private NavigationView navigationView;
 
 
+
+    android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        setContentView(R.layout.activity_main4);
+
         if (Build.VERSION.SDK_INT < 16) {
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                     WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
-        setContentView(R.layout.activity_main4_practice);
 
 
 
-        recyclerView1 = (RecyclerView) findViewById(R.id.recylcer_view_2);
 
-        card_View_course = (CardView) findViewById(R.id.cardview_processed_courses);
 
-        text_view_course = (TextView) findViewById(R.id.textview_processed_courses);
+        // Get user "data" from intent
+        Intent intent = getIntent();
+        String jsonObj_data_str = intent.getStringExtra("data");
+        //Log.d(All.TAG_LOG, "Intent has: " + jsonObj_data_str);
+
+//        if(jsonObj_data_str == null){
+//            // Restart app from scratch
+//
+//
+//            fragmentManager.beginTransaction().replace(R.id.fragment_container_main,fragment_5_data).commit();
+//
+//
+//
+//
+//
+//            // Start the LaunchScreenActivity Activity
+//
+//        }
+
+        if (savedInstanceState == null) {
+            // Code to specify the fragment to be used
+            //FragA0Homepage fragA0Homepage = new FragA0Homepage();
+            fragmentManager
+                    .beginTransaction()
+                    .add(R.id.fragment_container_main, Fragment_5_data.newInstance())
+                    .commit();
+        }
+
+
 
 
         navDrawerStart = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -75,142 +114,99 @@ public class Main4Activity_practice extends AppCompatActivity implements Navigat
 
 
 
-
-        navbar = (TextView) findViewById(R.id.menu_bar);
-
-        navbar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Log.d("@@@", "Custom nav button clicked!!");
-
-                if(navDrawerStart.isDrawerOpen(GravityCompat.START)) {
-                    navDrawerStart.closeDrawer(GravityCompat.START);
-                }else{
-                    navDrawerStart.openDrawer(GravityCompat.START);
-                }
-            }
-        });
-
-
-
-        textView_suggested_course = (TextView) findViewById(R.id.text_view_suggested_course);
-
-        card_View_course.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                i = new Intent(Main4Activity_practice.this,Main5Activity.class);
-                startActivity(i);
-            }
-        });
-
-        text_view_course.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                i = new Intent(Main4Activity_practice.this,Main5Activity.class);
-                startActivity(i);
-            }
-        });
-
-
-
-
-
-        textView_suggested_course.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                i = new Intent(Main4Activity_practice.this,Main5Activity.class);
-                startActivity(i);
-            }
-        });
-
-
-
-        input2 = new ArrayList<>();
-
-
-        input2.add(new My_Course_pojo_second(
-                R.drawable.ref
-
-        ));
-
-        input2.add(new My_Course_pojo_second(
-                R.drawable.ref2
-        ));
-
-
-        input2.add(new My_Course_pojo_second(
-                R.drawable.ref3
-
-        ));
-
-
-        input2.add(new My_Course_pojo_second(
-                R.drawable.ref4));
-
-
-
-        input2.add(new My_Course_pojo_second(
-                R.drawable.ref
-
-        ));
-
-
-        input2.add(new My_Course_pojo_second(
-                R.drawable.ref2
-
-        ));
-
-
-        input2.add(new My_Course_pojo_second(
-                R.drawable.ref3
-        ));
-
-
-
-        myAdapter2 = new My_Adapter_2(input2);
-        recyclerView1.setAdapter(myAdapter2);
-
-
-
-
-        recyclerView1.setAdapter(myAdapter2);
-
-
-        SnapHelper snapHelper1 = new LinearSnapHelper();
-        snapHelper1.attachToRecyclerView(recyclerView1);
-
-
-
-
-        layoutManager2 = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
-
-
-        recyclerView1.setLayoutManager(layoutManager2);
-
-
-
-//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-//                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-//        drawer.setDrawerListener(toggle);
-//        toggle.syncState();
 //
-//        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-//        navigationView.setNavigationItemSelectedListener(this);
+//        navbar = (TextView) findViewById(R.id.menu_bar);
+//
+//        navbar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                Log.d("@@@", "Custom nav button clicked!!");
+//
+//                if(navDrawerStart.isDrawerOpen(GravityCompat.START)) {
+//                    navDrawerStart.closeDrawer(GravityCompat.START);
+//                }else{
+//                    navDrawerStart.openDrawer(GravityCompat.START);
+//                }
+//            }
+//        });
+
+
+
+
+
+
+
+
+
+
+
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
     }
+
+
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (blockBackButton) {
+            return;
+        }
 
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
+        } else if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+            // There is at least one fragment in the Back Stack
+            // Time to resume it
+            getSupportFragmentManager().popBackStack();
         } else {
             super.onBackPressed();
         }
     }
 
+    private void y0OptionClick(String pos){
+
+        switch(pos){
+            case "0":
+
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragment_container_main , Fragment_5_data.newInstance())
+                        .addToBackStack(null)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+                        .commit();
+
+                //showSnackBar("Direct to Chapter-Module selection screen.");
+                break;
+        }
+
+
+    }
+
+    private void y0OptionClick1(String pos){
+
+        switch(pos){
+            case "0":
+
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragment_container_main , Fragment_6_data.newInstance())
+                        .addToBackStack(null)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+                        .commit();
+
+                //showSnackBar("Direct to Chapter-Module selection screen.");
+                break;
+        }
+    }
 
 //    public boolean onCreateOptionsMenu(Menu menu) {
 //        // Inflate the menu; this adds items to the action bar if it is present.
@@ -300,6 +296,9 @@ public class Main4Activity_practice extends AppCompatActivity implements Navigat
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+
 }
 
 

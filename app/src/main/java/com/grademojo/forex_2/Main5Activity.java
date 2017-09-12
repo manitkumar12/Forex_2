@@ -89,19 +89,7 @@ public class Main5Activity extends AppCompatActivity implements NavigationView.O
 
         navbar = (TextView) findViewById(R.id.menu_bar);
 
-        navbar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                Log.d("@@@", "Custom nav button clicked!!");
-
-                if(navDrawerStart.isDrawerOpen(GravityCompat.START)) {
-                    navDrawerStart.closeDrawer(GravityCompat.START);
-                }else{
-                    navDrawerStart.openDrawer(GravityCompat.START);
-                }
-            }
-        });
 
         if (savedInstanceState == null) {
 //           fm.beginTransaction.(R.id.frmae_6, forex_video_6)

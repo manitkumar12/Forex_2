@@ -1,5 +1,6 @@
 package com.grademojo.forex_2;
 
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +18,14 @@ public class Main3Activity extends AppCompatActivity {
 
     private View city_view;
     private ImageView person_image;
+
+
+
+    android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+
+    Fragment_4_data fragment_4_data = new Fragment_4_data();
+
+    Forex_Article_6 forex_article_6 = new Forex_Article_6();
 
 
     private CardView cardView_create_profile;
@@ -41,8 +50,7 @@ public class Main3Activity extends AppCompatActivity {
         cardView_create_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = new Intent(Main3Activity.this,Main4Activity.class);
-                startActivity(i);
+                fragmentManager.beginTransaction().replace(R.id.create_profile_frame,fragment_4_data).commit();
             }
         });
 
