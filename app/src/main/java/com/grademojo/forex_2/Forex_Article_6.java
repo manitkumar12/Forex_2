@@ -150,7 +150,7 @@ public class Forex_Article_6 extends Fragment {
 
 
 
-
+//
         my_course_forex_adapter = new My_Course_Forex_Adapter(input);
         recyclerView_4.setAdapter(my_course_forex_adapter);
 

@@ -68,6 +68,13 @@ public class Fragment_6_data extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.actvity_6_layout, container, false);
 
+        if (savedInstanceState==null)
+        {
+
+            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_5_layout,my_course_all_5).commit();
+
+        }
+
 
         textView_ongoing = (TextView) rootView.findViewById(R.id.text_for_Ongoing);
         textView_Complted = (TextView) rootView.findViewById(R.id.text_for_Completed);
@@ -81,7 +88,7 @@ public class Fragment_6_data extends Fragment {
             public void onClick(View v) {
 
 
-                main5.beginTransaction().replace(R.id.frame_5_layout,my_course_ongoing_5).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_5_layout,my_course_ongoing_5).commit();
 //
 //                textView_ongoing.setBackgroundResource(R.drawable.intermediate_background);
 //                textView_Complted.setBackgroundResource(R.drawable.advance_backgrond);
@@ -97,7 +104,7 @@ public class Fragment_6_data extends Fragment {
 //                textView_Complted.setTypeface(textView_Complted.getTypeface(), Typeface.NORMAL);
 
 //
-                main5.beginTransaction().replace(R.id.frame_5_layout,intermediate_41).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_5_layout,intermediate_41).commit();
 
                 textView_ongoing.setBackgroundResource(R.drawable.intermediate_background);
                 textView_Complted.setBackgroundResource(R.drawable.advance_backgrond);
@@ -129,7 +136,7 @@ public class Fragment_6_data extends Fragment {
             public void onClick(View v) {
 
 
-                main5.beginTransaction().replace(R.id.frame_5_layout,my_course_all_5).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_5_layout,my_course_all_5).commit();
 
                 textView_all.setBackgroundResource(R.drawable.begginner_blue);
 
@@ -158,7 +165,7 @@ public class Fragment_6_data extends Fragment {
             public void onClick(View v) {
 
 
-                main5.beginTransaction().replace(R.id.frame_5_layout, advance_41).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_5_layout, advance_41).commit();
 
                 textView_Complted.setBackgroundResource(R.drawable.back_ground_blue_article);
 

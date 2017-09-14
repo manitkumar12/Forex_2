@@ -32,6 +32,8 @@ public class Forex_Video_6 extends Fragment {
     private WebView webView;
 
 
+
+
     private My_Course_Forex_Adapter my_course_forex_adapter;
 
     private YouTube_Adapter_class youTube_adapter_class;

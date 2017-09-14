@@ -1,5 +1,6 @@
 package com.grademojo.forex_2;
 
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -25,6 +26,10 @@ public class My_course_All_5 extends Fragment {
     private RecyclerView recyclerView_3;
 
     private My_Course_Adapter m_Adapter;
+    int i;
+
+    Fragment_6_beginner_forex_data fragment_6_beginner_forex_data = new Fragment_6_beginner_forex_data();
+
 
 
 

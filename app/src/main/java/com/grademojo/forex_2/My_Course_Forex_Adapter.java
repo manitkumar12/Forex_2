@@ -1,7 +1,11 @@
 package com.grademojo.forex_2;
 
+import android.app.Activity;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,9 +18,7 @@ import com.grademojo.forex.R;
 
 import java.util.List;
 
-/**
- * Created by sapling_a0 on 18/8/17.
- */
+
 
 public class My_Course_Forex_Adapter extends RecyclerView.Adapter<My_Course_Forex_Adapter.ViewHolder> {
 
@@ -25,8 +27,13 @@ public class My_Course_Forex_Adapter extends RecyclerView.Adapter<My_Course_Fore
 
     private int i;
 
-    private Context context, context1, context2 ;
+    private Context context, context1, context2,context4 ;
 
+    Fragment_6_beginner_forex_data fragment_6_beginner_forex_data = new Fragment_6_beginner_forex_data();
+
+    Beginner_forex_video_first_question beginner_forex_video_first_question = new Beginner_forex_video_first_question();
+
+    FragmentManager fm  ;
 
 
 
@@ -108,6 +115,10 @@ public class My_Course_Forex_Adapter extends RecyclerView.Adapter<My_Course_Fore
 
 
 
+
+
+
+
         String my_course_text_2 = value1_2.get(position).getIntroduction();
 
         String timing_2 = value1_2.get(position).getTimimg_1();
@@ -130,9 +141,11 @@ public class My_Course_Forex_Adapter extends RecyclerView.Adapter<My_Course_Fore
         holder.text_view_points.setText(""+points_2);
 
 
+
         context = holder.textView_My_course_forex.getContext();
         context1 = holder.image_My_Courses_forex.getContext();
         context2 = holder.border_forex.getContext();
+
        // context4 = holder.time.getContext();
 
 
@@ -146,6 +159,14 @@ public class My_Course_Forex_Adapter extends RecyclerView.Adapter<My_Course_Fore
                     holder.border_forex.setBackgroundResource(R.color.green);
                     holder.time.setTextColor(ContextCompat.getColor(context,R.color.grey));
 
+//                    ((FragmentActivity)context4).getSupportFragmentManager().beginTransaction()
+//                            .replace(R.id.fragment_container_main,beginner_forex_video_first_question)
+//                            .commit();
+//
+//                    fm.beginTransaction().replace(R.id.fragment_container_main,beginner_forex_video_first_question).commit();
+
+
+
                     Intent i = new Intent(context, Beginner_forex_video_first_question.class);
                     context.startActivity(i);
 
@@ -157,7 +178,9 @@ public class My_Course_Forex_Adapter extends RecyclerView.Adapter<My_Course_Fore
                     holder.border_forex.setBackgroundResource(R.color.green);
                     holder.time.setTextColor(ContextCompat.getColor(context,R.color.grey));
 
-                    Intent i = new Intent(context, Beginner_forex_video_second_question.class);
+
+                   Intent i = new Intent(context,Beginner_forex_video_second_question.class);
+
                     context.startActivity(i);
                 } else if (i == 2) {
 
@@ -183,6 +206,9 @@ public class My_Course_Forex_Adapter extends RecyclerView.Adapter<My_Course_Fore
                     holder.image_My_Courses_forex.setImageResource(R.drawable.green_icon);
                     holder.border_forex.setBackgroundResource(R.color.green);
                     holder.time.setTextColor(ContextCompat.getColor(context,R.color.grey));
+
+//                    ((FragmentActivity)context).getSupportFragmentManager().beginTransaction()
+//                            .replace(R.id.fragment_container_main,fragment_6_beginner_forex_data).commit();
 
                     Intent i = new Intent(context, Beginner_forex_video_five_question.class);
                     context.startActivity(i);

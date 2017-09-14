@@ -50,7 +50,7 @@ public class Fragment_5_data extends Fragment{
 
     Fragment_6_data fragment_6_data = new Fragment_6_data();
 
-    android.support.v4.app.FragmentManager fm = getFragmentManager();
+   // android.support.v4.app.FragmentManager fm = getFragmentManager();
 
 
 
@@ -90,7 +90,7 @@ public class Fragment_5_data extends Fragment{
 //                i = new Intent(getActivity(), Fragment_6_data.class);
 //                startActivity(i);
 
-                  fm.beginTransaction().replace(R.id.fragment_container_main,fragment_6_data).commit();
+                  getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main,fragment_6_data).commit();
 
             }
         });
@@ -100,7 +100,7 @@ public class Fragment_5_data extends Fragment{
             public void onClick(View v) {
 //                i = new Intent(getActivity(), Fragment_6_data.class);
 //                startActivity(i);
-                  fm.beginTransaction().replace(R.id.fragment_container_main,fragment_6_data).commit();
+                  getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_main,fragment_6_data).commit();
             }
         });
 
