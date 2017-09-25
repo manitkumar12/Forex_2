@@ -198,6 +198,7 @@ public class Main4Activity_practice extends AppCompatActivity implements Navigat
 
                 getSupportFragmentManager()
                         .beginTransaction()
+
                         .replace(R.id.fragment_container_main , Fragment_6_data.newInstance())
                         .addToBackStack(null)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
