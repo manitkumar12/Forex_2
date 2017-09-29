@@ -155,7 +155,12 @@ public class Forex_Video_6 extends Fragment {
 
 
 
-        my_course_forex_adapter = new My_Course_Forex_Adapter(input);
+        my_course_forex_adapter = new My_Course_Forex_Adapter(input, new My_Course_Forex_Adapter.AdapToParentListener() {
+            @Override
+            public void adapToParent(int position) {
+
+            }
+        });
         recyclerView_4.setAdapter(my_course_forex_adapter);
 
 

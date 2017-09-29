@@ -1,11 +1,8 @@
 package com.grademojo.forex_2;
 
-import android.app.Activity;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -37,7 +34,8 @@ public class My_Course_Forex_Adapter extends RecyclerView.Adapter<My_Course_Fore
 
 
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
+    {
 
         public View border_forex;
 
@@ -50,10 +48,19 @@ public class My_Course_Forex_Adapter extends RecyclerView.Adapter<My_Course_Fore
 
         public View layout_view;
 
+        public interface ViewHolderClickListener {
+            public void onView(int position);
+        }
 
-        public ViewHolder(View itemView) {
+        public ViewHolderClickListener listener;
+
+
+
+        public ViewHolder(View itemView , ViewHolderClickListener mListener) {
 
             super(itemView);
+
+            listener = mListener;
 
 
             layout_view =itemView;
@@ -71,21 +78,34 @@ public class My_Course_Forex_Adapter extends RecyclerView.Adapter<My_Course_Fore
             border_forex  = itemView.findViewById(R.id.forex_border_my_course);
 
 
+        }
 
+        @Override
+        public void onClick(View v) {
 
+            int position = getAdapterPosition();
 
-
+            listener.onView(position);
 
         }
     }
 
 
-    public My_Course_Forex_Adapter(List<My_Course_Forex_Pojo> my_data_2)
-    {
-
-        value1_2 = my_data_2;
-
+    public interface AdapToParentListener{
+        public void adapToParent(int position);
     }
+
+    private AdapToParentListener listener;
+
+
+    public My_Course_Forex_Adapter(List<My_Course_Forex_Pojo> my_data_2, AdapToParentListener mListener) {
+
+
+        listener = mListener;
+        value1_2 = my_data_2;
+    }
+
+
 
 
 
@@ -94,12 +114,21 @@ public class My_Course_Forex_Adapter extends RecyclerView.Adapter<My_Course_Fore
     public My_Course_Forex_Adapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
 
+        Context context = parent.getContext();
+
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
 
         View view = inflater.inflate(R.layout.my_course_forex_relative,parent,false);
 
-        My_Course_Forex_Adapter.ViewHolder viewHolder;
-        viewHolder = new ViewHolder(view);
+
+        ViewHolder viewHolder = new ViewHolder(view, new ViewHolder.ViewHolderClickListener() {
+            @Override
+            public void onView(int position) {
+
+                listener.adapToParent(position);
+
+            }
+        });
 
         return viewHolder;
     }
@@ -110,7 +139,7 @@ public class My_Course_Forex_Adapter extends RecyclerView.Adapter<My_Course_Fore
     public void onBindViewHolder(final My_Course_Forex_Adapter.ViewHolder holder, int position) {
 
 
-        final My_Course_Forex_Pojo item = value1_2.get(position);
+        My_Course_Forex_Pojo item = value1_2.get(position);
 
 
 
@@ -167,8 +196,8 @@ public class My_Course_Forex_Adapter extends RecyclerView.Adapter<My_Course_Fore
 
 
 
-                    Intent i = new Intent(context, Beginner_forex_video_first_question.class);
-                    context.startActivity(i);
+//                    Intent i = new Intent(context, Beginner_forex_video_first_question.class);
+//                    context.startActivity(i);
 
 
                 } else if (i == 1) {
@@ -179,9 +208,9 @@ public class My_Course_Forex_Adapter extends RecyclerView.Adapter<My_Course_Fore
                     holder.time.setTextColor(ContextCompat.getColor(context,R.color.grey));
 
 
-                   Intent i = new Intent(context,Beginner_forex_video_second_question.class);
-
-                    context.startActivity(i);
+//                   Intent i = new Intent(context,Beginner_forex_video_second_question.class);
+//
+//                    context.startActivity(i);
                 } else if (i == 2) {
 
                     holder.textView_My_course_forex.setTextColor(ContextCompat.getColor(context, R.color.green));
@@ -189,8 +218,8 @@ public class My_Course_Forex_Adapter extends RecyclerView.Adapter<My_Course_Fore
                     holder.border_forex.setBackgroundResource(R.color.green);
                     holder.time.setTextColor(ContextCompat.getColor(context,R.color.grey));
 
-                    Intent i = new Intent(context, Beginner_forex_video_third_question.class);
-                    context.startActivity(i);
+//                    Intent i = new Intent(context, Beginner_forex_video_third_question.class);
+//                    context.startActivity(i);
                 } else if (i == 3) {
 
                     holder.textView_My_course_forex.setTextColor(ContextCompat.getColor(context, R.color.green));
@@ -198,8 +227,8 @@ public class My_Course_Forex_Adapter extends RecyclerView.Adapter<My_Course_Fore
                     holder.border_forex.setBackgroundResource(R.color.green);
                     holder.time.setTextColor(ContextCompat.getColor(context,R.color.grey));
 
-                    Intent i = new Intent(context, Beginner_forex_video_fourth_question.class);
-                    context.startActivity(i);
+//                    Intent i = new Intent(context, Beginner_forex_video_fourth_question.class);
+//                    context.startActivity(i);
                 } else if (i == 4) {
 
                     holder.textView_My_course_forex.setTextColor(ContextCompat.getColor(context, R.color.green));

@@ -1,5 +1,6 @@
 package com.grademojo.forex_2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -152,7 +153,16 @@ public class Forex_Hometask_6 extends Fragment {
 
 
 //
-        my_course_forex_adapter = new My_Course_Forex_Adapter(input);
+
+
+        my_course_forex_adapter = new My_Course_Forex_Adapter(input, new My_Course_Forex_Adapter.AdapToParentListener() {
+            @Override
+            public void adapToParent(int position) {
+                click(position);
+            }
+
+
+        });
         recyclerView_4.setAdapter(my_course_forex_adapter);
 
 
@@ -162,4 +172,28 @@ public class Forex_Hometask_6 extends Fragment {
 
         return rootView;
     }
+
+    private void click(int position) {
+
+        if (position==0)
+        {
+            Intent i = new Intent(getActivity(),Beginner_forex_video_first_question.class);
+            startActivity(i);
+        }
+        if (position==1)
+        {
+
+            Intent i = new Intent(getActivity(),Beginner_forex_video_second_question.class);
+            startActivity(i);
+        }
+        if (position==2)
+        {
+
+            Intent i = new Intent(getActivity(),Beginner_forex_video_third_question.class);
+            startActivity(i);
+        }
+
+    }
+
+
 }
