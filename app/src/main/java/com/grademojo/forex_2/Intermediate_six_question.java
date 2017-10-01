@@ -193,7 +193,7 @@ public class Intermediate_six_question extends AppCompatActivity implements Navi
         {
 
 
-            Intent i = new Intent(Intermediate_six_question.this,Main2Activity.class);
+            Intent i = new Intent(Intermediate_six_question.this,Signin_Activity.class);
 
             startActivity(i);
 

@@ -154,7 +154,7 @@ public class Advance_fourth_question extends AppCompatActivity implements Naviga
         {
 
 
-            Intent i = new Intent(Advance_fourth_question.this,Main2Activity.class);
+            Intent i = new Intent(Advance_fourth_question.this,Signin_Activity.class);
 
             startActivity(i);
 

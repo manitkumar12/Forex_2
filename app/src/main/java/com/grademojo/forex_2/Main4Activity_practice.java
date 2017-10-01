@@ -1,6 +1,5 @@
 package com.grademojo.forex_2;
 
-import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.net.Uri;
@@ -13,21 +12,15 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.LinearSnapHelper;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SnapHelper;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.grademojo.forex.R;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main4Activity_practice extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
@@ -285,7 +278,7 @@ public class Main4Activity_practice extends AppCompatActivity implements Navigat
         {
 
 
-            Intent i = new Intent(Main4Activity_practice.this,Main2Activity.class);
+            Intent i = new Intent(Main4Activity_practice.this,Signin_Activity.class);
 
             startActivity(i);
 

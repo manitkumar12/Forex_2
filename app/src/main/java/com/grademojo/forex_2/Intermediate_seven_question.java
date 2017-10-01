@@ -180,7 +180,7 @@ public class Intermediate_seven_question extends AppCompatActivity implements Na
         {
 
 
-            Intent i = new Intent(Intermediate_seven_question.this,Main2Activity.class);
+            Intent i = new Intent(Intermediate_seven_question.this,Signin_Activity.class);
 
             startActivity(i);
 

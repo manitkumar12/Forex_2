@@ -12,7 +12,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -300,7 +299,7 @@ public class Main6Activity extends AppCompatActivity implements NavigationView.O
         {
 
 
-            Intent i = new Intent(Main6Activity.this,Main2Activity.class);
+            Intent i = new Intent(Main6Activity.this,Signin_Activity.class);
 
             startActivity(i);
 

@@ -26,7 +26,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.grademojo.forex_2.Main2Activity"
+            android:name="com.grademojo.forex_2.Signin_Activity"
             android:screenOrientation="portrait" />
         <!-- android:finishOnTaskLaunch="true" -->
         <!-- android:clearTaskOnLaunch="true" -->
@@ -57,7 +57,6 @@
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" />
-
         <activity
             android:name="com.grademojo.forex_2.Main7Activity"
             android:screenOrientation="portrait" />
@@ -70,117 +69,130 @@
         <activity
             android:name="com.grademojo.forex_2.Sign_up"
             android:screenOrientation="portrait" />
-
-
         <activity
             android:name="com.grademojo.forex_2.Facebook_integration"
             android:screenOrientation="portrait" />
-        <activity android:name="com.grademojo.forex_2.Intermediate_first_question"
-         android:finishOnTaskLaunch="true"
-         android:clearTaskOnLaunch="true"
-         android:excludeFromRecents="true"
-         android:noHistory="true"
-            />
-        <activity android:name="com.grademojo.forex_2.Intermediate_second_question"
-            android:finishOnTaskLaunch="true"
+        <activity
+            android:name="com.grademojo.forex_2.Intermediate_first_question"
             android:clearTaskOnLaunch="true"
             android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
             android:noHistory="true" />
-        <activity android:name="com.grademojo.forex_2.Intermediate_third_question"
-            android:finishOnTaskLaunch="true"
+        <activity
+            android:name="com.grademojo.forex_2.Intermediate_second_question"
             android:clearTaskOnLaunch="true"
             android:excludeFromRecents="true"
-            android:noHistory="true"
-            />
-        <activity android:name="com.grademojo.forex_2.Intermediate_fourth_question"
             android:finishOnTaskLaunch="true"
-            android:clearTaskOnLaunch="true"
-            android:excludeFromRecents="true"
             android:noHistory="true" />
-        <activity android:name="com.grademojo.forex_2.Intermediate_five_question"
-            android:finishOnTaskLaunch="true"
+        <activity
+            android:name="com.grademojo.forex_2.Intermediate_third_question"
             android:clearTaskOnLaunch="true"
             android:excludeFromRecents="true"
-            android:noHistory="true"
-            />
-        <activity android:name="com.grademojo.forex_2.Intermediate_six_question"
             android:finishOnTaskLaunch="true"
-            android:clearTaskOnLaunch="true"
-            android:excludeFromRecents="true"
             android:noHistory="true" />
-        <activity android:name="com.grademojo.forex_2.Main4Activity_practice"
-            android:finishOnTaskLaunch="true"
+        <activity
+            android:name="com.grademojo.forex_2.Intermediate_fourth_question"
             android:clearTaskOnLaunch="true"
             android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
             android:noHistory="true" />
-        <activity android:name="com.grademojo.forex_2.Advance_first_question"
-            android:finishOnTaskLaunch="true"
+        <activity
+            android:name="com.grademojo.forex_2.Intermediate_five_question"
             android:clearTaskOnLaunch="true"
             android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
             android:noHistory="true" />
-        <activity android:name="com.grademojo.forex_2.Advance_second_question"
-            android:finishOnTaskLaunch="true"
+        <activity
+            android:name="com.grademojo.forex_2.Intermediate_six_question"
             android:clearTaskOnLaunch="true"
             android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
             android:noHistory="true" />
-        <activity android:name="com.grademojo.forex_2.Advance_third_question"
-            android:finishOnTaskLaunch="true"
+        <activity
+            android:name="com.grademojo.forex_2.Main4Activity_practice"
             android:clearTaskOnLaunch="true"
             android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
             android:noHistory="true" />
-        <activity android:name="com.grademojo.forex_2.Advance_fourth_question"
-            android:finishOnTaskLaunch="true"
+        <activity
+            android:name="com.grademojo.forex_2.Advance_first_question"
             android:clearTaskOnLaunch="true"
             android:excludeFromRecents="true"
-            android:noHistory="true"
-            />
-        <activity android:name="com.grademojo.forex_2.Advance_five_question"
             android:finishOnTaskLaunch="true"
-            android:clearTaskOnLaunch="true"
-            android:excludeFromRecents="true"
-            android:noHistory="true"
-            />
-        <activity android:name="com.grademojo.forex_2.Beginner_forex_video_first_question"
-            android:finishOnTaskLaunch="true"
-            android:clearTaskOnLaunch="true"
-            android:excludeFromRecents="true"
-            android:noHistory="true"
-            />
-        <activity android:name="com.grademojo.forex_2.Beginner_forex_video_second_question"
-            android:finishOnTaskLaunch="true"
-            android:clearTaskOnLaunch="true"
-            android:excludeFromRecents="true"
             android:noHistory="true" />
-        <activity android:name="com.grademojo.forex_2.Beginner_forex_video_third_question"
-            android:finishOnTaskLaunch="true"
+        <activity
+            android:name="com.grademojo.forex_2.Advance_second_question"
             android:clearTaskOnLaunch="true"
             android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
             android:noHistory="true" />
-        <activity android:name="com.grademojo.forex_2.Beginner_forex_video_fourth_question"
-            android:finishOnTaskLaunch="true"
+        <activity
+            android:name="com.grademojo.forex_2.Advance_third_question"
             android:clearTaskOnLaunch="true"
             android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
             android:noHistory="true" />
-        <activity android:name="com.grademojo.forex_2.Beginner_forex_video_five_question"
-            android:finishOnTaskLaunch="true"
+        <activity
+            android:name="com.grademojo.forex_2.Advance_fourth_question"
             android:clearTaskOnLaunch="true"
             android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
             android:noHistory="true" />
-        <activity android:name="com.grademojo.forex_2.Beginner_forex_video_six_question"
-            android:finishOnTaskLaunch="true"
+        <activity
+            android:name="com.grademojo.forex_2.Advance_five_question"
             android:clearTaskOnLaunch="true"
             android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
             android:noHistory="true" />
-        <activity android:name="com.grademojo.forex_2.Beginner_forex_video_seven_question"
-            android:finishOnTaskLaunch="true"
+        <activity
+            android:name="com.grademojo.forex_2.Beginner_forex_video_first_question"
             android:clearTaskOnLaunch="true"
             android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
             android:noHistory="true" />
-        <activity android:name="com.grademojo.forex_2.Intermediate_seven_question"
-            android:finishOnTaskLaunch="true"
+        <activity
+            android:name="com.grademojo.forex_2.Beginner_forex_video_second_question"
             android:clearTaskOnLaunch="true"
             android:excludeFromRecents="true"
-            android:noHistory="true"
-            />
+            android:finishOnTaskLaunch="true"
+            android:noHistory="true" />
+        <activity
+            android:name="com.grademojo.forex_2.Beginner_forex_video_third_question"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
+            android:noHistory="true" />
+        <activity
+            android:name="com.grademojo.forex_2.Beginner_forex_video_fourth_question"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
+            android:noHistory="true" />
+        <activity
+            android:name="com.grademojo.forex_2.Beginner_forex_video_five_question"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
+            android:noHistory="true" />
+        <activity
+            android:name="com.grademojo.forex_2.Beginner_forex_video_six_question"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
+            android:noHistory="true" />
+        <activity
+            android:name="com.grademojo.forex_2.Beginner_forex_video_seven_question"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
+            android:noHistory="true" />
+        <activity
+            android:name="com.grademojo.forex_2.Intermediate_seven_question"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
+            android:noHistory="true" />
+        <activity android:name="com.grademojo.forex_2.GmailIntegration"></activity>
     </application>
+
 </manifest>

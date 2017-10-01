@@ -58,7 +58,7 @@
                 />
 
             <EditText
-                android:id="@+id/email_name_text_sign_in"
+                android:id="@+id/email_name_edit_text_sign_in"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#00000000"
@@ -132,6 +132,7 @@
 
 
             <TextView
+                android:id="@+id/textview_forgot_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Forget password?"

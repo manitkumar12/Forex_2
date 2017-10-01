@@ -33,7 +33,7 @@ public class Sign_up extends AppCompatActivity {
 
         signup = (CardView) findViewById(R.id.card_view_sign_up_next_2);
         textView_sign_up = (TextView) findViewById(R.id.text_view_sign_up_next_2);
-        password_Edit_text_sign_in = (EditText) findViewById(R.id.password_edit_text_sign_in);
+        password_Edit_text_sign_in = (EditText) findViewById(R.id.password_edit_text_sign_up);
         confirm_password_Edit_text_sign_in = (EditText) findViewById(R.id.profession_edit_text_sign_in);
         imageView2 = (ImageView) findViewById(R.id.eye2);
         imageView = (ImageView) findViewById(R.id.eye1);

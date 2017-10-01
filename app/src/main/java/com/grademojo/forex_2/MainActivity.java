@@ -275,7 +275,7 @@ public class MainActivity extends AppCompatActivity
         {
 
 
-            Intent i = new Intent(MainActivity.this,Main2Activity.class);
+            Intent i = new Intent(MainActivity.this,Signin_Activity.class);
 
             startActivity(i);
 

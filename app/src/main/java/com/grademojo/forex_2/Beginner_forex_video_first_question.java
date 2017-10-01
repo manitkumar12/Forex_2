@@ -158,7 +158,7 @@ public class Beginner_forex_video_first_question extends AppCompatActivity imple
         {
 
 
-            Intent i = new Intent(Beginner_forex_video_first_question.this,Main2Activity.class);
+            Intent i = new Intent(Beginner_forex_video_first_question.this,Signin_Activity.class);
 
             startActivity(i);
 

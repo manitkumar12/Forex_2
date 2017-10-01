@@ -155,7 +155,7 @@ public class Advance_third_question extends AppCompatActivity implements Navigat
         {
 
 
-            Intent i = new Intent(Advance_third_question.this,Main2Activity.class);
+            Intent i = new Intent(Advance_third_question.this,Signin_Activity.class);
 
             startActivity(i);
 

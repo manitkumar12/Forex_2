@@ -94,7 +94,7 @@ public class Main7Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                i = new Intent(Main7Activity.this, Main2Activity.class);
+                i = new Intent(Main7Activity.this, Signin_Activity.class);
                 startActivity(i);
 
             }
@@ -104,7 +104,7 @@ public class Main7Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                i = new Intent(Main7Activity.this, Main2Activity.class);
+                i = new Intent(Main7Activity.this, Signin_Activity.class);
                 startActivity(i);
 
             }

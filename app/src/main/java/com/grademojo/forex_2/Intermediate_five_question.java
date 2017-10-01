@@ -184,7 +184,7 @@ public class Intermediate_five_question extends AppCompatActivity implements Nav
         {
 
 
-            Intent i = new Intent(Intermediate_five_question.this,Main2Activity.class);
+            Intent i = new Intent(Intermediate_five_question.this,Signin_Activity.class);
 
             startActivity(i);
 

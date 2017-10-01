@@ -62,7 +62,7 @@
                     />
 
                 <EditText
-                    android:id="@+id/email_name_text_sign_in"
+                    android:id="@+id/email_name_edit_text_sign_in"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#00000000"
@@ -106,7 +106,7 @@
 
 
                 <EditText
-                    android:id="@+id/password_edit_text_sign_in"
+                    android:id="@+id/password_edit_text_sign_up"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"

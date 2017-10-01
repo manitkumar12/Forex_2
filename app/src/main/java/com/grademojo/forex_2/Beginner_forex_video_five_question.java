@@ -156,7 +156,7 @@ public class Beginner_forex_video_five_question extends AppCompatActivity implem
         {
 
 
-            Intent i = new Intent(Beginner_forex_video_five_question.this,Main2Activity.class);
+            Intent i = new Intent(Beginner_forex_video_five_question.this,Signin_Activity.class);
 
             startActivity(i);
 
