@@ -76,6 +76,7 @@ public class My_Course_Forex_Adapter extends RecyclerView.Adapter<My_Course_Fore
             text_view_points = (TextView) itemView.findViewById(R.id.points);
 
             border_forex  = itemView.findViewById(R.id.forex_border_my_course);
+            itemView.setOnClickListener(this);
 
 
         }

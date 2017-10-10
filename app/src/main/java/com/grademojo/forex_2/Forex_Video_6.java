@@ -1,5 +1,6 @@
 package com.grademojo.forex_2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -158,6 +159,13 @@ public class Forex_Video_6 extends Fragment {
         my_course_forex_adapter = new My_Course_Forex_Adapter(input, new My_Course_Forex_Adapter.AdapToParentListener() {
             @Override
             public void adapToParent(int position) {
+
+                if (position==0)
+                {
+
+                    Intent i = new Intent(getActivity(),Beginner_forex_video_first_question.class);
+                    startActivity(i);
+                }
 
             }
         });
